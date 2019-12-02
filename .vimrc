@@ -76,8 +76,12 @@ nnoremap <C-n> :NERDTreeToggle<Cr>
 "
 " Language Specific
 "
+let g:ale_linters = {}
 
 " Rust
-let g:ale_linters = {'rust': ['cargo', 'rls']}
+let g:ale_linters['rust'] = ['cargo', 'rls']
 let g:ale_rust_rls_toolchain = 'nightly'
 
+
+" Python
+let g:ale_linters['python'] = ['flake8']
