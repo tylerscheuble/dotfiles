@@ -47,17 +47,9 @@ Plug 'Shougo/vimproc.vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'lervag/vimtex'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
-
-"
-" Linting
-"
-let g:airline#extensions#ale#enabled = 1
-
-"
-" Cosmetic
-"
 
 set t_Co=256
 set background=dark
@@ -66,22 +58,13 @@ colorscheme molokai
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 
-"
-" Mappings
-"
-
-" Toggle nerdtree with C-n
 nnoremap <C-n> :NERDTreeToggle<Cr>
 
-"
-" Language Specific
-"
+let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {}
-
-" Rust
 let g:ale_linters['rust'] = ['cargo', 'rls']
 let g:ale_rust_rls_toolchain = 'nightly'
-
-
-" Python
 let g:ale_linters['python'] = ['flake8']
+
+" Ignore files in .gitignore with ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
