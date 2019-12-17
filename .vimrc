@@ -48,6 +48,9 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'lervag/vimtex'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
 
 call plug#end()
 
@@ -59,6 +62,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 
 nnoremap <C-n> :NERDTreeToggle<Cr>
+nnoremap <Space> za
 
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {}
@@ -68,3 +72,9 @@ let g:ale_linters['python'] = ['flake8']
 
 " Ignore files in .gitignore with ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+let g:SimpylFold_docstring_preview = 1
+
+" For making insert mode visually different from normal mode
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
