@@ -52,6 +52,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'Konfekt/FastFold'
 Plug 'tmhedberg/SimpylFold'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
