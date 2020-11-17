@@ -58,11 +58,14 @@ Plug 'jpalardy/vim-slime'
 Plug 'lepture/vim-jinja'
 Plug 'dag/vim-fish'
 Plug 'liuchengxu/vim-which-key'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc-python'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
+
 " Plug 'davidhalter/jedi-vim'
 
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum'
 let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum'
