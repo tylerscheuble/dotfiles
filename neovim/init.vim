@@ -70,7 +70,13 @@ let g:deoplete#enable_at_startup = 1
 let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum'
 let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum'
 set t_Co=256
-set termguicolors
+
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 set background=light
 colorscheme solarized8
 
@@ -104,10 +110,6 @@ let g:airline_theme = 'light'
 let g:slime_target = 'tmux'
 let g:slime_default_config = {'socket_name': get(split($TMUX, ','), 0), 'target_pane': ':.2'}
 
-nnoremap <C-n> :NERDTreeToggle<Cr>
-nnoremap ; za
-noremap <silent><esc> <esc>:noh<CR><esc>
-
 
 " Linting and formatting configuration
 let g:airline#extensions#ale#enabled = 1
@@ -129,6 +131,17 @@ let g:ale_linters['go'] = ['golint', 'go build']
 let mapleader = ' '
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=250
+
+" NERDTree bindings
+nnoremap <C-n> :NERDTreeToggle<Cr>
+nnoremap ; za
+noremap <silent><esc> <esc>:noh<CR><esc>
+nnoremap <leader>tt :NERDTreeToggle<CR>
+nnoremap <leader>tf :NERDTreeCWD<CR>
+nnoremap <leader>tv :NERDTreeVCS<CR>
+
+" Folding bindings
+nnoremap <leader>ff za
 
 " Ignore files in .gitignore with ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
