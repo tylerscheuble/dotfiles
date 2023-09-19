@@ -6,7 +6,8 @@ colors
 docs
 ftplugin
 ginit.vim
-lua/user
+# lua/user exclusion is not necessary when using astronvim as a subtree
+# lua/user
 neoconf.json
 plugin
 queries
