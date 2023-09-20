@@ -4,7 +4,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
-  { import = "astrocommunity.indent.indent-tools-nvim" },
+  -- { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.terminal-integration/vim-tpipeline" },
   {

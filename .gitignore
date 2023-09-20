@@ -1,0 +1,14 @@
+# Exclude all by default
+/*/
+
+# Repo metadata
+/!.gitignore
+/!README.md
+/!LICENSE
+
+# Neovim
+!/nvim/
+!/tmux/
+!/fish/
+!/kitty/
+

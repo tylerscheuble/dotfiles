@@ -1,0 +1,20 @@
+[nvim]
+name = "Neovim"
+requires = ["nvim", "git", "tree-sitter", "rg", "gdu", "btm", "lazygit"]
+commands.update = [
+  "git subtree --pull --prefix nvim https://github.com/AstroNvim/AstroNvim.git main squash",
+]
+
+[tmux]
+name = "Tmux"
+requires = ["tmux", "git"]
+setup = ["git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"]
+
+[fish]
+name = "Fish"
+requires = ["fish", "starship"]
+
+[kitty]
+name = "Kitty"
+requires = ["kitty"]
+links = [{ from = "kitty.conf", to = "$HOME/.config/kitty/kitty.conf" }]
