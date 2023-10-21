@@ -69,7 +69,6 @@ return {
     ["<leader>arl"] = { "<Cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
   },
   t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<leader><esc>"] = { "<C-\\><C-n>", desc = "Enter normal mode" }
   },
 }

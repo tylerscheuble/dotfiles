@@ -1,6 +1,6 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
@@ -31,6 +31,9 @@ return {
     }
   },
   { import = "astrocommunity.note-taking.neorg" },
+  { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.openingh-nvim" },
 --  {
 --    "nvim-neorg/neorg",
 --    dependencies = {
