@@ -24,7 +24,8 @@ return {
     "akinsho/toggleterm.nvim",
     lazy = false,
     opts = {
-      open_mapping = [[<c-a>]],
+      insert_mappings = false,
+      open_mapping = [[<tab>]],
     },
   }
 }
