@@ -2,6 +2,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   -- { import = "astrocommunity.indent.indent-tools-nvim" },

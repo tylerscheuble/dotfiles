@@ -69,17 +69,25 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+    -- Resession configs
+    -- https://github.com/stevearc/resession.nvim#guides
+    -- Automatically save a session when you exit Neovim
+    -- vim.api.nvim_create_autocmd("VimLeavePre", {
+  --     callback = function()
+  --       -- Always save a special session named "last"
+  --       resession.save("last")
+  --     end,
+  --   })
+  --   -- Periodically save the current session
+  --   require('resession').setup({
+  --     autosave = {
+  --       enabled = true,
+  --       interval = 60,
+  --       notify = true,
+  --     },
+  --   })
+  --   -- Automatically restore the last session on startup
+  --   require('resession').load("last")
   end,
+
 }
