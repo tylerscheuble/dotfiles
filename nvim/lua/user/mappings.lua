@@ -1,23 +1,5 @@
--- Mapping data with "desc" stored directly by vim.keymap.set().
---
--- Please use this mappings table to set keyboard mapping since this is the
--- lower level configuration and more robust one. (which-key will
--- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-
-    -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
-
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -51,6 +33,7 @@ return {
     ["<leader>arr"] = { "<Cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
     ["<leader>arl"] = { "<Cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
   },
+
   v = {
     -- We make many of these commands also available in visual mode
     ["<leader>a"] = { name = "ChatGPT" },
@@ -68,6 +51,7 @@ return {
     ["<leader>arr"] = { "<Cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
     ["<leader>arl"] = { "<Cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
   },
+
   t = {
     ["<leader><esc>"] = { "<C-\\><C-n>", desc = "Enter normal mode" }
   },
