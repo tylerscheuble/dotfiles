@@ -5,8 +5,10 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  { import = "astrocommunity.debugging.nvim-bqf" },
   -- { import = "astrocommunity.indent.indent-tools-nvim" },
   { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.terminal-integration/vim-tpipeline" },
@@ -50,5 +52,5 @@ return {
 --    },
 --  }
   -- Sadly the minimap does not seem to work well
-  -- { import = "astrocommunity.split-and-window.minimap-vim" },
+  { import = "astrocommunity.split-and-window.minimap-vim" },
 }
