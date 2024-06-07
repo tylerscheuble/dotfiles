@@ -1,8 +1,11 @@
 [nvim]
 name = "Neovim"
 requires = ["nvim", "git", "tree-sitter", "rg", "gdu", "btm", "lazygit"]
+commands.setup = [
+  "git subtree add --prefix nvim https://github.com/AstroNvim/template main --squash",
+]
 commands.update = [
-  "git subtree --pull --prefix nvim https://github.com/AstroNvim/AstroNvim.git main squash",
+  "git subtree pull --prefix nvim https://github.com/AstroNvim/template main --squash",
 ]
 
 [tmux]
