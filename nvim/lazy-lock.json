@@ -77,7 +77,7 @@
   "todo-comments.nvim": { "branch": "main", "commit": "a7e39ae9e74f2c8c6dc4eea6d40c3971ae84752d" },
   "toggleterm.nvim": { "branch": "main", "commit": "066cccf48a43553a80a210eb3be89a15d789d6e6" },
   "tsc.nvim": { "branch": "main", "commit": "06734767eee606ebaa0a4645e0fd801c64e6aa7a" },
-  "venv-selector.nvim": { "branch": "regexp", "commit": "b691d0fc88f51aa901e2a1889d5a2ea5f7d777a9" },
+  "venv-selector.nvim": { "branch": "regexp", "commit": "203c9046e1c0787ec00edfd456b30e4381afbfd1" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vim-kitty": { "branch": "main", "commit": "029f565b0411c62075f3a9ba2c0acb58e6f6934c" },
   "vim-tpipeline": { "branch": "master", "commit": "5dd3832bd6e239feccb11cadca583cdcf9d5bda1" },
