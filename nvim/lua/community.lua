@@ -5,7 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
@@ -14,10 +14,11 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
-  { import = "astrocommunity.debugging.nvim-bqf" },
+  { import = "astrocommunity.quickfix.nvim-bqf" },
   -- { import = "astrocommunity.indent.indent-tools-nvim" },
-  { import = "astrocommunity.register.nvim-neoclip-lua" },
+  -- { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.terminal-integration/vim-tpipeline" },
+  -- { import = "astrocommunity.code-runner.molten-nvim" },
   {
     "vimpostor/vim-tpipeline",
     init = function()
@@ -42,9 +43,11 @@ return {
     }
   },
   { import = "astrocommunity.note-taking.neorg" },
-  { import = "astrocommunity.git.octo-nvim" },
+  -- { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },
+  { import = "astrocommunity.code-runner.vim-slime" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
 --  {
 --    "nvim-neorg/neorg",
 --    dependencies = {

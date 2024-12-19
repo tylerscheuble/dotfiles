@@ -38,4 +38,17 @@ return {
       return opts
     end,
   },
+  {
+    "stevearc/oil.nvim",
+    lazy = false,  -- ensure it's loaded at startup
+    opts = { 
+      default_file_explorer = true
+    }
+  },
+  { 
+    "nvim-focus/focus.nvim",
+    config = function()
+      require("focus").setup()
+    end
+  },
 }

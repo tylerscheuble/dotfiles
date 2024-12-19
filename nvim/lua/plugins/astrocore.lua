@@ -95,7 +95,7 @@ return {
 
       },
       t = {
-        ["<leader><esc>"] = { "<C-\\><C-n>", desc = "Enter normal mode" },
+        -- ["<leader><esc>"] = { "<C-\\><C-n>", desc = "Enter normal mode" },
       },
     },
   },
