@@ -45,10 +45,21 @@ return {
       default_file_explorer = true
     }
   },
-  { 
-    "nvim-focus/focus.nvim",
-    config = function()
-      require("focus").setup()
-    end
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
   },
+  -- { 
+  --   "nvim-focus/focus.nvim",
+  --   config = function()
+  --     require("focus").setup({
+  --       split = {
+  --         tmux = true,
+  --       },
+  --       ui = {
+  --         absolutenumber_unfocussed = true,
+  --       },
+  --     })
+  --   end,
+  -- },
 }

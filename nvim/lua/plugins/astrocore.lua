@@ -43,7 +43,6 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
@@ -57,6 +56,8 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        -- Oil
+        ["<Leader>e"] = { function() require("oil").toggle_float() end, desc = "Toggle oil browser in floating window" },
         -- ChatGPT
         ["<leader>a"] = { name = "ChatGPT" },
         ["<leader>ac"] = { "<Cmd>ChatGPT<CR>", desc = "Open interactive chat" },
