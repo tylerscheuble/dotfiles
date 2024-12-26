@@ -21,4 +21,8 @@ return {
       open_mapping = [[<S-Tab>]],
     },
   },
+  {
+    "terrastruct/d2-vim",
+    ft = "d2",
+  },
 }
