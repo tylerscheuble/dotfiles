@@ -42,17 +42,6 @@ return {
       return opts
     end,
   },
-  {
-    "stevearc/oil.nvim",
-    lazy = false,  -- ensure it's loaded at startup
-    opts = { 
-      default_file_explorer = true
-    }
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
   -- { 
   --   "nvim-focus/focus.nvim",
   --   config = function()

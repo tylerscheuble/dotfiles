@@ -22,10 +22,11 @@ return {
   --     opts.options.g["test#python#runner"] = "pytest"
   --   end,
   -- },
+  { import = "astrocommunity.test.neotest" },
   -- { import = "astrocommunity.indent.indent-tools-nvim" },
   -- { import = "astrocommunity.register.nvim-neoclip-lua" },
-  { import = "astrocommunity.terminal-integration/vim-tpipeline" },
-  -- { import = "astrocommunity.code-runner.molten-nvim" },
+  -- { import = "astrocommunity.terminal-integration.vim-tpipeline" },
+  { import = "astrocommunity.code-runner.overseer-nvim" },
   -- {
   --   "vimpostor/vim-tpipeline",
   --   init = function()
@@ -50,12 +51,11 @@ return {
     }
   },
   { import = "astrocommunity.note-taking.neorg" },
-  -- octo-nvim conflicts with <LEADER>O (I use it for oil)
-  -- { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },
+  { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
   -- { import = "astrocommunity.code-runner.vim-slime" },
-  { import = "astrocommunity.file-explorer.oil-nvim" },
 --  {
 --    "nvim-neorg/neorg",
 --    dependencies = {
