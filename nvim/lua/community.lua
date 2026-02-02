@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
@@ -38,9 +39,9 @@ return {
   {
     "jackMort/ChatGPT.nvim",
     opts = {
-      openai_params = {
-        model = "gpt-4",
-      },
+      -- openai_params = {
+        -- model = "gpt-4",
+      -- },
     },
   },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
