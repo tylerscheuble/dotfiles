@@ -1,4 +1,4 @@
-starship init fish | source
+starship init fish --print-full-init | source
 direnv hook fish | source
 
 set fish_greeting
