@@ -6,7 +6,7 @@ return {
   {
     "loctvl842/monokai-pro.nvim",
     name="monokai-pro",
-    config = function()
+config = function()
       require("monokai-pro").setup({
         filter="spectrum",
       })
@@ -41,6 +41,41 @@ return {
       -- }
       return opts
     end,
+  },
+  {
+    "olimorris/codecompanion.nvim",
+    opts = {
+      interactions = {
+        chat = {
+          adapter = "anthropic",
+          model = "claude-sonnet-4-6",
+        },
+      },
+    },
+  },
+  {
+    "yetone/avante.nvim",
+    opts = {
+      input = {
+        provider = "snacks",
+      },
+      providers = {
+        claude = {
+          endpoint = "https://api.anthropic.com",
+          auth_type = "max", -- Set to "max" to sign in with Claude Pro/Max subscription
+          model = "claude-sonnet-4-6",
+          extra_request_body = {
+            temperature = 0.75,
+            max_tokens = 4096,
+          },
+        },
+      },
+    },
+  },
+  {
+    -- Dressing is pulled in by the avante layer but is deprecated. We want to use snacks instead.
+    "stevearc/dressing.nvim",
+    enabled = false,
   },
   -- { 
   --   "nvim-focus/focus.nvim",

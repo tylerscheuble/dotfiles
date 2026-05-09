@@ -5,14 +5,12 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
   -- { 
@@ -26,23 +24,7 @@ return {
   -- { import = "astrocommunity.indent.indent-tools-nvim" },
   -- { import = "astrocommunity.register.nvim-neoclip-lua" },
   -- { import = "astrocommunity.terminal-integration.vim-tpipeline" },
-  { import = "astrocommunity.code-runner.overseer-nvim" },
-  -- {
-  --   "vimpostor/vim-tpipeline",
-  --   init = function()
-  --     -- Fill the center tmux status bar
-  --     vim.g.tpipeline_fillcentre = 1
-  --   end,
-  -- },
-  { import = "astrocommunity.editing-support.chatgpt-nvim" },
-  {
-    "jackMort/ChatGPT.nvim",
-    opts = {
-      openai_params = {
-        model = "gpt-4",
-      },
-    },
-  },
+  -- { import = "astrocommunity.code-runner.overseer-nvim" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
   {
     "gbprod/cutlass.nvim",
@@ -50,8 +32,10 @@ return {
       cut_key = "x",
     }
   },
-  { import = "astrocommunity.note-taking.neorg" },
-  { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.ai.avante-nvim" },
+  { import = "astrocommunity.fuzzy-finder.snacks-picker" },
+  -- { import = "astrocommunity.note-taking.neorg" },
+  -- { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
@@ -69,5 +53,5 @@ return {
 --    },
 --  }
   -- Sadly the minimap does not seem to work well
-  { import = "astrocommunity.split-and-window.minimap-vim" },
+  -- { import = "astrocommunity.split-and-window.minimap-vim" },
 }
