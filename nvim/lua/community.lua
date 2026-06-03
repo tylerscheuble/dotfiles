@@ -13,18 +13,9 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
-  -- { 
-  --   import = "astrocommunity.test.vim-test",
-  --   config = function(_, opts)
-  --     opts.options.g["test#strategy"] = "toggleterm"
-  --     opts.options.g["test#python#runner"] = "pytest"
-  --   end,
-  -- },
+  { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.test.neotest" },
-  -- { import = "astrocommunity.indent.indent-tools-nvim" },
-  -- { import = "astrocommunity.register.nvim-neoclip-lua" },
-  -- { import = "astrocommunity.terminal-integration.vim-tpipeline" },
-  -- { import = "astrocommunity.code-runner.overseer-nvim" },
+  { import = "astrocommunity.register.nvim-neoclip-lua" },
   { import = "astrocommunity.editing-support.cutlass-nvim" },
   {
     "gbprod/cutlass.nvim",
@@ -32,26 +23,10 @@ return {
       cut_key = "x",
     }
   },
-  { import = "astrocommunity.ai.avante-nvim" },
   { import = "astrocommunity.fuzzy-finder.snacks-picker" },
-  -- { import = "astrocommunity.note-taking.neorg" },
-  -- { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.ai.opencode-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
-  -- { import = "astrocommunity.code-runner.vim-slime" },
---  {
---    "nvim-neorg/neorg",
---    dependencies = {
---      "nvim-neorg/neorg-telescope",
---    },
---    branch = "main",
---    opts = {
---      load = {
---        ["core.integrations.telescope"] = {},
---      },
---    },
---  }
-  -- Sadly the minimap does not seem to work well
-  -- { import = "astrocommunity.split-and-window.minimap-vim" },
+  { import = "astrocommunity.file-explorer.yazi-nvim" },
 }

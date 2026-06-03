@@ -8,6 +8,7 @@
 
 # Neovim
 !/nvim/
+/nvim/lua/plugins/private.lua
 !/tmux/
 !/fish/
 !/kitty/

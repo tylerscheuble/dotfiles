@@ -22,6 +22,21 @@ return {
       virtual_text = true,
       underline = true,
     },
+    autocmds = {
+      markdown_wrap = {
+        {
+          event = "FileType",
+          pattern = "markdown",
+          desc = "Wrap markdown at word boundaries",
+          group = "markdown_wrap",
+          callback = function()
+            vim.opt_local.wrap = true
+            vim.opt_local.textwidth = 99
+            vim.opt_local.linebreak = true
+          end,
+        },
+      },
+    },
     -- passed to `vim.filetype.add`
     filetypes = {
       -- see `:h vim.filetype.add` for usage
@@ -69,43 +84,11 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-        -- ChatGPT
-        ["<leader>a"] = { name = "ChatGPT" },
-        ["<leader>ac"] = { "<Cmd>ChatGPT<CR>", desc = "Open interactive chat" },
-        ["<leader>aa"] = { "<Cmd>ChatGPTActAs<CR>", desc = "Open with prompt selection" },
-        ["<leader>ae"] = { "<Cmd>ChatGPTEditWithInstructions<CR>", desc = "Edit code with instructions" },
-        -- ChatGPT run commands
-        ["<leader>ar"] = { name = "Run action" },
-        ["<leader>arg"] = { "<Cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
-        ["<leader>art"] = { "<Cmd>ChatGPTRun translate<CR>", desc = "Translate" },
-        ["<leader>ark"] = { "<Cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
-        ["<leader>ard"] = { "<Cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
-        ["<leader>ara"] = { "<Cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
-        ["<leader>aro"] = { "<Cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
-        ["<leader>ars"] = { "<Cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
-        ["<leader>arf"] = { "<Cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
-        ["<leader>arx"] = { "<Cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
-        ["<leader>arr"] = { "<Cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
-        ["<leader>arl"] = { "<Cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
+        -- For faster horizontal scrolling
+        ["A-h"] = { "20h", desc = "Scroll left" },
+        ["A-l"] = { "20l", desc = "Scroll right" },
       },
-      v = {
-        -- ChatGPT, visual mode edition
-        ["<leader>a"] = { name = "ChatGPT" },
-        ["<leader>ae"] = { "<Cmd>ChatGPTEditWithInstructions<CR>", desc = "Edit code with instructions" },
-        ["<leader>ar"] = { name = "Run action" },
-        ["<leader>arg"] = { "<Cmd>ChatGPTRun grammar_correction<CR>", desc = "Grammar Correction" },
-        ["<leader>art"] = { "<Cmd>ChatGPTRun translate<CR>", desc = "Translate" },
-        ["<leader>ark"] = { "<Cmd>ChatGPTRun keywords<CR>", desc = "Keywords" },
-        ["<leader>ard"] = { "<Cmd>ChatGPTRun docstring<CR>", desc = "Docstring" },
-        ["<leader>ara"] = { "<Cmd>ChatGPTRun add_tests<CR>", desc = "Add Tests" },
-        ["<leader>aro"] = { "<Cmd>ChatGPTRun optimize_code<CR>", desc = "Optimize Code" },
-        ["<leader>ars"] = { "<Cmd>ChatGPTRun summarize<CR>", desc = "Summarize" },
-        ["<leader>arf"] = { "<Cmd>ChatGPTRun fix_bugs<CR>", desc = "Fix Bugs" },
-        ["<leader>arx"] = { "<Cmd>ChatGPTRun explain_code<CR>", desc = "Explain Code" },
-        ["<leader>arr"] = { "<Cmd>ChatGPTRun roxygen_edit<CR>", desc = "Roxygen Edit" },
-        ["<leader>arl"] = { "<Cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code Readability Analysis" },
-
-      },
+      v = {},
       t = {
         -- ["<leader><esc>"] = { "<C-\\><C-n>", desc = "Enter normal mode" },
       },
