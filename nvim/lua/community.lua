@@ -13,6 +13,10 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python.base" },
   { import = "astrocommunity.pack.python.ruff" },
+  { import = "astrocommunity.pack.python.ty" },
+  { import = "astrocommunity.recipes.neovide" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.split-and-window.minimap-vim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.quickfix.nvim-bqf" },
   { import = "astrocommunity.motion.flash-nvim" },
@@ -25,7 +29,6 @@ return {
       cut_key = "x",
     }
   },
-  { import = "astrocommunity.fuzzy-finder.snacks-picker" },
   { import = "astrocommunity.ai.opencode-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },

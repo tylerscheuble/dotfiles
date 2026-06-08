@@ -3,6 +3,8 @@
 
 ---@type LazySpec
 return {
+  -- snacks-picker disables telescope, but telescope-file-browser depends on it
+  { "nvim-telescope/telescope.nvim", enabled = true },
   {
     "loctvl842/monokai-pro.nvim",
     name="monokai-pro",

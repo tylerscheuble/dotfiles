@@ -47,6 +47,7 @@ return {
 
       -- the key is the server that is being setup with `vim.lsp.config`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
+      basedpyright = false, -- disable basedpyright; using base + ruff only
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
